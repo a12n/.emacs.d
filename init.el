@@ -154,6 +154,10 @@
 
 (add-hook 'c-mode-common-hook (lambda () (setq show-trailing-whitespace t)))
 
+;; Haskell
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+
 ;; Backup
 
 (setq backup-by-copying t)
