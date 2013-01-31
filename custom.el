@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(evil-auto-indent nil)
  '(indent-tabs-mode nil)
+ '(require-final-newline (quote ask))
  '(tab-width 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
