@@ -1,6 +1,8 @@
-^auto-save-list/
-^backup/
-^elpa/
-^org/
-^xmpp/
-^secret\.el.*
+syntax: glob
+
+auto-save-list/
+backup/
+elpa/
+org/
+xmpp/
+secret.el*
