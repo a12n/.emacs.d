@@ -119,6 +119,20 @@
 (add-hook 'jabber-chat-mode-hook 'flyspell-mode)
 (add-hook 'jabber-post-connect-hooks 'jabber-autoaway-start)
 
+;; Org and remember
+
+(require 'org)
+
+(setq org-directory (concat user-emacs-directory "org/"))
+(setq org-hide-leading-stars t)
+(setq org-modules '(org-habit))
+(setq org-default-notes-file (concat org-directory "default.org"))
+
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+
 ;; Ada
 
 (setq ada-case-identifier 'ada-no-auto-case)
