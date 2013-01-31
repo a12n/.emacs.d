@@ -1,5 +1,7 @@
 (setq arn/at-home (string-match "^mithlond" (system-name)))
 
+(add-to-list 'load-path (concat user-emacs-directory "lisp"))
+
 ;; Easy PG
 
 (require 'epa-file)
@@ -117,6 +119,8 @@
 (setq ada-language-version 'ada2005)
 
 ;; C, C++
+
+(require 'include-guard)
 
 (c-add-style "arn/cc-style"
              '("stroustrup"
