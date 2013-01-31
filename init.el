@@ -41,7 +41,7 @@
 (require 'ido)
 
 (ido-mode t)
-(setf ido-enable-flex-matching t)
+(setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 
 ;; Buffers
