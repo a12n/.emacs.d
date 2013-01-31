@@ -1,0 +1,6 @@
+^auto-save-list/
+^backup/
+^elpa/
+^org/
+^xmpp/
+^secret\.el.*

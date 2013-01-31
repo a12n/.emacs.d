@@ -1,0 +1,177 @@
+(setq arn/at-home (string-match "^mithlond" (system-name)))
+
+;; Easy PG
+
+(require 'epa-file)
+
+(setq epa-armor t)
+
+;; Sensitive
+
+(load (concat user-emacs-directory
+	      (if arn/at-home
+		  "secret.el"
+		"secret.el.gpg")))
+
+;; Packages
+
+(require 'package)
+
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; Calendar
+
+(require 'calendar)
+
+(calendar-set-date-style 'iso)
+(setq calendar-week-start-day 1)
+
+;; Evil
+
+(require 'evil)
+
+(evil-mode 1)
+
+;; Ido
+
+(require 'ido)
+
+(ido-mode t)
+(setf ido-enable-flex-matching t)
+(setq ido-everywhere t)
+
+;; Buffers
+
+(require 'midnight)
+(require 'uniquify)
+
+(midnight-delay-set 'midnight-delay (* 5 60 60))
+(setq uniquify-buffer-name-style 'post-forward)
+
+;; YASnippet
+
+(require 'yasnippet)
+
+(yas/initialize)
+(unless (listp yas/root-directory)
+  (setq yas/root-directory (list (concat user-emacs-directory "snippets")
+				 yas/root-directory)))
+(yas/reload-all)
+
+;; Jabber
+
+(require 'jabber)
+
+(setq arn/jabber-resource
+      (if arn/at-home
+	  "Hejmloke"
+	"Laborloke"))
+(setq arn/jabber-priority
+      (if arn/at-home
+	  32
+	64))
+
+(setq fsm-debug nil)
+(setq jabber-account-list
+      `((,(concat arn/jabber-id "/" arn/jabber-resource)
+         (:connection-type . starttls)
+         (:password . ,arn/jabber-password))))
+(setq jabber-use-sasl t)
+(setq jabber-connection-ssl-program 'gnutls)
+(setq jabber-activity-count-in-title t)
+(setq jabber-auto-reconnect t)
+(setq jabber-autoaway-verbose t)
+(setq jabber-backlog-days 7)
+(setq jabber-backlog-number 128)
+(setq jabber-chat-buffer-show-avatar nil)
+(setq jabber-chat-delayed-time-format "%Y-%m-%d %H:%M:%S%z")
+(setq jabber-chat-fill-long-lines nil)
+(setq jabber-chat-time-format "%H:%M:%S")
+(setq jabber-chatstates-confirm nil)
+(setq jabber-default-priority arn/jabber-priority)
+(setq jabber-events-confirm-composing nil)
+(setq jabber-events-confirm-delivered nil)
+(setq jabber-events-confirm-displayed nil)
+(setq jabber-history-enabled t)
+(setq jabber-history-size-limit 2048)
+(setq jabber-history-dir (concat user-emacs-directory "xmpp/"))
+(setq jabber-muc-completion-delimiter ": ")
+(setq jabber-roster-show-empty-group t)
+(setq jabber-roster-sort-functions '(jabber-roster-sort-by-displayname))
+(setq jabber-show-resources 'sometimes)
+(setq jabber-use-global-history nil)
+(setq jabber-vcard-avatars-retrieve nil)
+
+(jabber-activity-mode 1)
+(jabber-mode-line-mode 1)
+
+(add-hook 'jabber-chat-mode-hook 'flyspell-mode)
+(add-hook 'jabber-post-connect-hooks 'jabber-autoaway-start)
+
+;; Ada
+
+(setq ada-case-identifier 'ada-no-auto-case)
+(setq ada-indent-is-separate nil)
+(setq ada-language-version 'ada2005)
+
+;; C, C++
+
+(c-add-style "arn/cc-style"
+             '("stroustrup"
+               (c-offsets-alist (inline-open . 0)
+                                (innamespace . -))))
+(setq c-tab-always-indent nil)
+(setq c-default-style
+      '((c++-mode . "arn/cc-style")
+        (c-mode . "arn/cc-style")))
+
+(add-hook 'c-mode-common-hook (lambda () (setq show-trailing-whitespace t)))
+
+;; Backup
+
+(setq backup-by-copying t)
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backup/"))))
+(setq delete-old-versions t)
+(setq kept-new-versions 2)
+(setq kept-old-versions 5)
+(setq make-backup-files t)
+(setq version-control t)
+
+;; Appearance and behaviour
+
+(setq comment-empty-lines t)
+(setq inhibit-startup-screen t)
+(setq initial-scratch-message nil)
+(setq scroll-margin 4)
+(setq show-paren-style 'mixed)
+(setq tab-always-indent t)
+
+(auto-compression-mode 1)
+(column-number-mode 1)
+(desktop-save-mode -1)
+(menu-bar-mode 1)
+(mouse-avoidance-mode 'none)
+(scroll-bar-mode -1)
+(show-paren-mode 1)
+(size-indication-mode 1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
+
+(load-theme 'solarized-dark t)
+
+(server-start)
+
+;; Bind keys, enable functions
+
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
+;; Custom
+
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(load custom-file)
