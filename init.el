@@ -52,6 +52,13 @@
 (midnight-delay-set 'midnight-delay (* 5 60 60))
 (setq uniquify-buffer-name-style 'post-forward)
 
+;; EDiff
+
+(require 'ediff)
+
+(setq ediff-split-window-function 'split-window-horizontally)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
 ;; YASnippet
 
 (require 'yasnippet)
