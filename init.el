@@ -153,10 +153,14 @@
              '("stroustrup"
                (c-offsets-alist (inline-open . 0)
                                 (innamespace . -))))
+(c-add-style "arn/java-style"
+             '("bsd"
+               (c-basic-offset . 3)))
 (setq c-tab-always-indent nil)
 (setq c-default-style
       '((c++-mode . "arn/cc-style")
-        (c-mode . "arn/cc-style")))
+        (c-mode . "arn/cc-style")
+        (java-mode . "arn/java-style")))
 
 (add-hook 'c-mode-common-hook (lambda () (setq show-trailing-whitespace t)))
 
