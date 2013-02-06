@@ -192,7 +192,6 @@
 (desktop-save-mode -1)
 (menu-bar-mode 1)
 (mouse-avoidance-mode 'banish)
-(mouse-avoidance-mode 'none)
 (scroll-bar-mode -1)
 (show-paren-mode 1)
 (size-indication-mode 1)
