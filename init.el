@@ -91,6 +91,7 @@
 (setq jabber-connection-ssl-program 'gnutls)
 (setq jabber-activity-count-in-title t)
 (setq jabber-auto-reconnect t)
+(setq jabber-autoaway-method 'jabber-xprintidle-get-idle-time)
 (setq jabber-autoaway-verbose t)
 (setq jabber-backlog-days 7)
 (setq jabber-backlog-number 128)
