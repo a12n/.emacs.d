@@ -140,6 +140,10 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; Maxima
+
+(setq imaxima-fnt-size "LARGE")
+
 ;; Ada
 
 (setq ada-case-identifier 'ada-no-auto-case)
