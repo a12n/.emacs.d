@@ -185,6 +185,8 @@
 
 ;; Appearance and behaviour
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (setq comment-empty-lines t)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
