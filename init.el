@@ -173,6 +173,10 @@
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
+;; Lua
+
+(setq lua-indent-level 4)
+
 ;; Backup
 
 (setq backup-by-copying t)
