@@ -197,6 +197,7 @@
 (setq scroll-margin 4)
 (setq show-paren-style 'mixed)
 (setq tab-always-indent t)
+(setq x-select-enable-primary t)
 
 (auto-compression-mode 1)
 (column-number-mode 1)
