@@ -209,7 +209,11 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(load-theme 'solarized-dark t)
+(cond ((= emacs-major-version 24)
+       (load-theme 'solarized-dark t))
+      ((= emacs-major-version 23)
+       (color-theme-initialize)
+       (color-theme-solarized-dark)))
 
 (server-start)
 
