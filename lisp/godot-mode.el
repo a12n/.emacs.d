@@ -1,0 +1,153 @@
+;;
+;; Generic mode for editing GDScript (Godot engine script) files
+;;
+
+(require 'generic-x)
+
+(define-generic-mode 'godot-mode
+  '(?#)
+
+  '("and" "break" "class" "const" "continue" "elif" "else" "enum"
+    "export" "extends" "for" "func" "if" "in" "or" "pass" "return"
+    "self" "tool" "var" "while")
+
+  `((,(regexp-opt '("abs" "acos" "asin" "atan" "atan2" "ceil" "clamp"
+                    "convert" "cos" "cosh" "db2linear" "decimals"
+                    "dectime" "deg2rad" "dict2inst" "ease" "exp"
+                    "floor" "fmod" "fposmod" "funcref" "hash"
+                    "inst2dict" "isinf" "isnan" "lerp" "linear2db"
+                    "load" "log" "max" "min" "nearest_po2" "pow"
+                    "print" "print_stack" "printerr" "printraw"
+                    "printt" "rad2deg" "rand_range" "rand_seed"
+                    "randf" "randi" "randomize" "range" "round" "sign"
+                    "sin" "sinh" "sqrt" "stepify" "str" "tan" "tanh"
+                    "weakref") 'symbols) . font-lock-builtin-face)
+    (,(regexp-opt '("PI" "false" "null" "true") 'symbols) . font-lock-constant-face)
+    ("^func\\s-+\\(\\sw+\\)\\s-*(" 1 font-lock-function-name-face)
+    ("\\(?:const\\|\\(?:export\\s-+\\)?var\\)\\s-+\\(\\sw+\\)\\s-*" 1 font-lock-variable-name-face)
+    (,(regexp-opt '("AABB" "AcceptDialog" "AnimatedSprite"
+                    "AnimatedSprite3D" "Animation" "AnimationPlayer"
+                    "AnimationTreePlayer" "Area" "Area2D" "Array"
+                    "AtlasTexture" "AudioServer" "AudioServerSW"
+                    "AudioStream" "AudioStreamGibberish"
+                    "AudioStreamMPC" "AudioStreamOGGVorbis"
+                    "AudioStreamResampled" "AudioStreamSpeex"
+                    "BakedLight" "BakedLightInstance" "BaseButton"
+                    "BitMap" "BoneAttachment" "Box3" "BoxContainer"
+                    "BoxShape" "Button" "ButtonArray" "ButtonGroup"
+                    "Camera" "Camera2D" "CanvasItem" "CanvasLayer"
+                    "CapsuleShape" "CapsuleShape2D" "CarBody"
+                    "CarWheel" "CenterContainer" "CheckButton"
+                    "CircleShape2D" "CollisionObject"
+                    "CollisionObject2D" "CollisionPolygon2D"
+                    "CollisionShape" "CollisionShape2D" "Color"
+                    "ColorArray" "ColorPicker" "ColorPickerButton"
+                    "ConcavePolygonShape" "ConcavePolygonShape2D"
+                    "ConfigFile" "ConfirmationDialog" "Container"
+                    "Control" "ConvexPolygonShape"
+                    "ConvexPolygonShape2D" "CubeMap" "Curve2D"
+                    "Curve3D" "DampedSpringJoint2D" "Dictionary"
+                    "DirectionalLight" "Directory" "EditableShape"
+                    "EditableSphere" "EditorImportPlugin"
+                    "EditorPlugin" "EditorScenePostImport"
+                    "EditorScript" "EmptyControl" "Environment"
+                    "EventPlayer" "EventStream" "EventStreamChibi"
+                    "File" "FileDialog" "FixedMaterial" "FollowCamera"
+                    "Font" "FuncRef" "GDNativeClass" "GDScript"
+                    "Geometry" "GeometryInstance" "Globals"
+                    "GridContainer" "GridMap" "GrooveJoint2D"
+                    "HBoxContainer" "HButtonArray" "HScrollBar"
+                    "HSeparator" "HSlider" "HSplitContainer"
+                    "HTTPClient" "IP" "IP_Unix" "Image"
+                    "ImagePathFinder" "ImageTexture"
+                    "ImmediateGeometry" "Input" "InputDefault"
+                    "InputEvent" "InputEvent" "InputEventAction"
+                    "InputEventJoyButton" "InputEventJoyMotion"
+                    "InputEventKey" "InputEventMouseButton"
+                    "InputEventMouseMotion" "InputEventScreenDrag"
+                    "InputEventScreenTouch" "InputMap" "IntArray"
+                    "InterpolatedCamera" "Joint2D" "KinematicBody2D"
+                    "Label" "LargeTexture" "Light" "LineEdit"
+                    "LineShape2D" "MainLoop" "MarginContainer"
+                    "Marshalls" "Material" "Matrix3" "Matrix3"
+                    "Matrix32" "Matrix32" "MenuButton" "Mesh"
+                    "MeshDataTool" "MeshInstance" "MeshLibrary"
+                    "MultiMesh" "MultiMeshInstance" "Mutex" "Nil"
+                    "Node" "Node2D" "NodePath" "OS" "Object" "Object"
+                    "OmniLight" "OptionButton" "PHashTranslation"
+                    "PackedDataContainer" "PackedDataContainerRef"
+                    "PackedScene" "PacketPeer" "PacketPeerStream"
+                    "Panel" "PanelContainer" "ParallaxBackground"
+                    "ParallaxLayer" "ParticleAttractor2D"
+                    "ParticleSystemMaterial" "Particles" "Particles2D"
+                    "Path" "Path2D" "PathFollow" "PathRemap"
+                    "Performance" "Physics2DDirectBodyState"
+                    "Physics2DDirectBodyStateSW"
+                    "Physics2DDirectSpaceState" "Physics2DServer"
+                    "Physics2DServerSW" "Physics2DShapeQueryResult"
+                    "PhysicsBody" "PhysicsBody2D"
+                    "PhysicsDirectBodyState"
+                    "PhysicsDirectBodyStateSW"
+                    "PhysicsDirectSpaceState" "PhysicsServer"
+                    "PhysicsServerSW" "PhysicsShapeQueryResult"
+                    "PinJoint2D" "Plane" "PlaneShape"
+                    "PolygonPathFinder" "Popup" "PopupDialog"
+                    "PopupMenu" "PopupPanel" "Portal" "Position2D"
+                    "Position3D" "ProgressBar" "ProximityGroup" "Quad"
+                    "Quat" "RID" "Range" "RawArray" "RayCast"
+                    "RayCast2D" "RayShape" "RayShape2D" "RealArray"
+                    "Rect2" "RectangleShape2D" "Reference"
+                    "ReferenceFrame" "RegEx" "RemoteTransform2D"
+                    "RenderTargetTexture" "Resource"
+                    "ResourceImportMetadata"
+                    "ResourceInteractiveLoader" "ResourceLoader"
+                    "ResourcePreloader" "ResourceSaver "
+                    "RichTextLabel" "RigidBody" "RigidBody2D" "Room"
+                    "RoomBounds" "Sample" "SampleLibrary"
+                    "SamplePlayer" "SamplePlayer2D" "SceneIO"
+                    "SceneInteractiveLoader" "SceneMainLoop"
+                    "ScenePreloader" "Script" "ScrollBar"
+                    "ScrollContainer" "SegmentShape2D" "Semaphore"
+                    "Separator" "Shader" "ShaderMaterial" "Shape"
+                    "Shape2D" "Size2" "Skeleton" "Slider"
+                    "SoundPlayer2D" "SoundRoomParams" "Spatial"
+                    "SpatialPlayer" "SpatialSamplePlayer"
+                    "SpatialSound2DServer" "SpatialSound2DServerSW"
+                    "SpatialSoundServer" "SpatialSoundServerSW"
+                    "SpatialStreamPlayer" "SphereShape" "SpinBox"
+                    "SplitContainer" "SpotLight" "Sprite" "Sprite3D"
+                    "SpriteBase3D" "SpriteFrames" "StaticBody"
+                    "StaticBody2D" "StreamPeer" "StreamPeerSSL"
+                    "StreamPeerTCP" "StreamPlayer" "String"
+                    "StringArray" "StyleBox" "StyleBoxEmpty"
+                    "StyleBoxFlat" "StyleBoxImageMask"
+                    "StyleBoxTexture" "SurfaceTool" "TCP_Server"
+                    "TabContainer" "Tabs" "TestCube" "TextEdit"
+                    "Texture" "TextureButton" "TextureFrame"
+                    "TextureProgress" "Theme" "Thread" "TileMap"
+                    "TileSet" "Timer" "TouchScreenButton" "Transform"
+                    "Translation" "TranslationServer" "Tree"
+                    "TreeItem" "UnshadedMaterial" "VBoxContainer"
+                    "VButtonArray" "VScrollBar" "VSeparator" "VSlider"
+                    "VSplitContainer" "Vector2" "Vector2Array"
+                    "Vector3" "Vector3Array" "VideoPlayer"
+                    "VideoStream" "VideoStreamTheora" "Viewport"
+                    "ViewportSprite" "VisibilityEnabler"
+                    "VisibilityEnabler2D" "VisibilityNotifier"
+                    "VisibilityNotifier2D" "VisualInstance"
+                    "VisualServer" "WindowDialog" "World" "World2D"
+                    "WorldEnvironment" "XMLParser" "bool" "float"
+                    "int" "null") 'symbols) . font-lock-type-face))
+
+  '("\\.gd$")
+
+  (list
+   (function
+    (lambda ()
+      (modify-syntax-entry ?' "\"" (syntax-table))
+      (modify-syntax-entry ?_ "w" (syntax-table))
+      (setq indent-tabs-mode t))))
+
+  "A mode for editing Godot engine script files.")
+
+(provide 'godot-mode)
