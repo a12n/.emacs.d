@@ -173,6 +173,17 @@
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
+;; OCaml
+
+(let ((s (substring (shell-command-to-string "opam config var share") 0 -1)))
+  (add-to-list 'load-path (concat s "/emacs/site-lisp")))
+
+(require 'merlin)
+
+(add-hook 'tuareg-mode-hook 'merlin-mode)
+(setq merlin-command 'opam)
+(setq merlin-use-auto-complete-mode 'easy)
+
 ;; Lua
 
 (setq lua-indent-level 4)
