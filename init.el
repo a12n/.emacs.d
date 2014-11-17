@@ -218,7 +218,7 @@
 (column-number-mode 1)
 (desktop-save-mode -1)
 (global-hl-line-mode 1)
-(menu-bar-mode 1)
+(menu-bar-mode -1)
 (mouse-avoidance-mode 'animate)
 (scroll-bar-mode -1)
 (show-paren-mode 1)
