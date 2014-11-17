@@ -67,11 +67,7 @@
 
 (require 'yasnippet)
 
-(yas/initialize)
-(unless (listp yas/root-directory)
-  (setq yas/root-directory (list (concat user-emacs-directory "snippets")
-				 yas/root-directory)))
-(yas/reload-all)
+(yas-global-mode 1)
 
 ;; Jabber
 
