@@ -23,7 +23,7 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-(dolist (pkg '(auto-complete color-theme-solarized evil jabber))
+(dolist (pkg '(auto-complete color-theme-solarized evil jabber yasnippet))
   (package-install pkg))
 
 ;; Calendar
