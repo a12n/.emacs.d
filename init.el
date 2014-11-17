@@ -24,7 +24,8 @@
 (package-initialize)
 
 (dolist (pkg '(auto-complete color-theme-solarized evil jabber yasnippet))
-  (package-install pkg))
+  (unless (package-installed-p pkg)
+    (package-install pkg)))
 
 ;; Calendar
 
