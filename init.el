@@ -28,6 +28,7 @@
                color-theme-solarized
                evil
                jabber
+               tuareg
                yasnippet))
   (unless (package-installed-p pkg)
     (package-install pkg)))
