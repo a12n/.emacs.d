@@ -23,7 +23,12 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-(dolist (pkg '(auto-complete color-theme-solarized evil jabber yasnippet))
+(dolist (pkg '(auto-complete
+               cmake-mode
+               color-theme-solarized
+               evil
+               jabber
+               yasnippet))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
