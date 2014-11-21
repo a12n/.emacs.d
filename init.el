@@ -77,6 +77,8 @@
 
 ;; Jabber
 
+(add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem")
+
 (require 'jabber)
 
 (setq arn/jabber-resource
