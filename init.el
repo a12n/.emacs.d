@@ -64,6 +64,13 @@
 (setq mu4e-sent-folder "/INBOX.Sent")
 (setq mu4e-trash-folder "/INBOX.Trash")
 
+(require 'smtpmail)
+
+(setq message-send-mail-function 'smtpmail-send-it)
+(setq smtpmail-smtp-server "mail.bestmx.ru")
+(setq smtpmail-smtp-user user-mail-address)
+(setq smtpmail-stream-type 'starttls)
+
 ;; Evil
 
 (require 'evil)
