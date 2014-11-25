@@ -59,6 +59,7 @@
 
 (setq mu4e-confirm-quit nil)
 (setq mu4e-drafts-folder "/INBOX.Drafts")
+(setq mu4e-headers-date-format "%Y-%m-%d")
 (setq mu4e-mu-home (expand-file-name "~/mail/.mu"))
 (setq mu4e-refile-folder "/Archive")
 (setq mu4e-sent-folder "/INBOX.Sent")
