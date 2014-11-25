@@ -29,6 +29,7 @@
                  color-theme-solarized
                  evil
                  jabber
+                 restclient
                  tuareg
                  yasnippet))
     (unless (package-installed-p pkg)
