@@ -52,6 +52,17 @@
 
 (setq user-full-name "Anton Yabchinskiy")
 
+(require 'mu4e)
+
+(setq mu4e-maildir (concat "~/mail/" user-mail-address))
+
+(setq mu4e-confirm-quit nil)
+(setq mu4e-drafts-folder "/INBOX.Drafts")
+(setq mu4e-mu-home (expand-file-name "~/mail/.mu"))
+(setq mu4e-refile-folder "/Archive")
+(setq mu4e-sent-folder "/INBOX.Sent")
+(setq mu4e-trash-folder "/INBOX.Trash")
+
 ;; Evil
 
 (require 'evil)
