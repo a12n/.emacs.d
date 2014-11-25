@@ -23,15 +23,22 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-(dolist (pkg '(auto-complete
-               cmake-mode
-               color-theme-solarized
-               evil
-               jabber
-               tuareg
-               yasnippet))
-  (unless (package-installed-p pkg)
-    (package-install pkg)))
+(defun arn/install-packages ()
+  (dolist (pkg '(auto-complete
+                 cmake-mode
+                 color-theme-solarized
+                 evil
+                 jabber
+                 tuareg
+                 yasnippet))
+    (unless (package-installed-p pkg)
+      (package-install pkg))))
+
+(condition-case nil
+    (arn/install-packages)
+  (error
+   (package-refresh-contents)
+   (arn/install-packages)))
 
 ;; Calendar
 
