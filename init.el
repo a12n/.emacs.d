@@ -48,6 +48,10 @@
 (calendar-set-date-style 'iso)
 (setq calendar-week-start-day 1)
 
+;; Email
+
+(setq user-full-name "Anton Yabchinskiy")
+
 ;; Evil
 
 (require 'evil)
