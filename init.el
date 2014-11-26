@@ -58,12 +58,12 @@
 (setq mu4e-maildir (concat "~/mail/" user-mail-address))
 
 (setq mu4e-confirm-quit nil)
-(setq mu4e-drafts-folder "/INBOX.Drafts")
+(setq mu4e-drafts-folder "/Drafts")
 (setq mu4e-headers-date-format "%Y-%m-%d")
 (setq mu4e-mu-home (expand-file-name "~/mail/.mu"))
 (setq mu4e-refile-folder "/Archive")
-(setq mu4e-sent-folder "/INBOX.Sent")
-(setq mu4e-trash-folder "/INBOX.Trash")
+(setq mu4e-sent-folder "/Sent")
+(setq mu4e-trash-folder "/Trash")
 (setq mu4e-view-show-addresses t)
 
 (setq mail-user-agent 'mu4e-user-agent)
