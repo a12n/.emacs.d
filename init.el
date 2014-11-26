@@ -248,6 +248,7 @@
 (setq comment-empty-lines t)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
+(setq mouse-yank-at-point t)
 (setq scroll-margin 4)
 (setq show-paren-style 'mixed)
 (setq tab-always-indent t)
