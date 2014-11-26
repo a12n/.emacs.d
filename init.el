@@ -65,6 +65,8 @@
 (setq mu4e-sent-folder "/INBOX.Sent")
 (setq mu4e-trash-folder "/INBOX.Trash")
 
+(setq mail-user-agent 'mu4e-user-agent)
+
 (require 'smtpmail)
 
 (setq message-send-mail-function 'smtpmail-send-it)
