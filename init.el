@@ -71,6 +71,7 @@
 
 (require 'smtpmail)
 
+(setq message-kill-buffer-on-exit t)
 (setq message-send-mail-function 'smtpmail-send-it)
 (setq smtpmail-smtp-server "mail.bestmx.ru")
 (setq smtpmail-smtp-user user-mail-address)
