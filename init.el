@@ -64,6 +64,7 @@
 (setq mu4e-refile-folder "/Archive")
 (setq mu4e-sent-folder "/Sent")
 (setq mu4e-trash-folder "/Trash")
+(setq mu4e-update-interval 150)
 (setq mu4e-view-show-addresses t)
 
 (setq mail-user-agent 'mu4e-user-agent)
