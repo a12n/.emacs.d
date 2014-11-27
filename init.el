@@ -23,6 +23,9 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
+(unless (file-exists-p "~/.emacs.d/elpa/archives")
+  (package-refresh-contents))
+
 (defun arn/install-packages ()
   (dolist (pkg '(auto-complete
                  cmake-mode
