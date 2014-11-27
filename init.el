@@ -26,23 +26,16 @@
 (unless (file-exists-p "~/.emacs.d/elpa/archives")
   (package-refresh-contents))
 
-(defun arn/install-packages ()
-  (dolist (pkg '(auto-complete
-                 cmake-mode
-                 color-theme-solarized
-                 evil
-                 jabber
-                 restclient
-                 tuareg
-                 yasnippet))
-    (unless (package-installed-p pkg)
-      (package-install pkg))))
-
-(condition-case nil
-    (arn/install-packages)
-  (error
-   (package-refresh-contents)
-   (arn/install-packages)))
+(dolist (pkg '(auto-complete
+               cmake-mode
+               color-theme-solarized
+               evil
+               jabber
+               restclient
+               tuareg
+               yasnippet))
+  (unless (package-installed-p pkg)
+    (package-install pkg)))
 
 ;; Calendar
 
