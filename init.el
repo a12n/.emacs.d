@@ -227,6 +227,16 @@
 (setq merlin-command 'opam)
 (setq merlin-use-auto-complete-mode 'easy)
 
+;; Erlang
+
+(let ((path "/usr/local/lib/erlang/"))
+  (when (file-accessible-directory-p path)
+    (setq erlang-root-dir path)
+    ;; FIXME: Handle tools version
+    (add-to-list 'load-path (concat erlang-root-dir "lib/tools-2.7.1/emacs/"))
+    (add-to-list 'exec-path (concat erlang-root-dir "bin/"))
+    (require 'erlang-start)))
+
 ;; Lua
 
 (setq lua-indent-level 4)
