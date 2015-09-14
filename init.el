@@ -2,6 +2,11 @@
 
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
+;; Custom
+
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(load custom-file)
+
 ;; Easy PG
 
 (require 'epa-file)
@@ -292,8 +297,3 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
-;; Custom
-
-(setq custom-file (concat user-emacs-directory "custom.el"))
-(load custom-file)
