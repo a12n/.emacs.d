@@ -282,8 +282,7 @@
 (tooltip-mode -1)
 
 (cond ((= emacs-major-version 24)
-       (load-theme 'solarized t)
-       (enable-theme 'solarized))
+       (load-theme 'solarized t))
       ((= emacs-major-version 23)
        (color-theme-initialize)
        (color-theme-solarized-dark)))
