@@ -278,7 +278,7 @@
 
 (cond ((= emacs-major-version 24)
        (load-theme 'solarized t)
-       (enable-theme))
+       (enable-theme 'solarized))
       ((= emacs-major-version 23)
        (color-theme-initialize)
        (color-theme-solarized-dark)))
