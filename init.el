@@ -117,6 +117,7 @@
 
 ;; Jabber
 
+(setq dired-bind-jump nil)
 (require 'jabber)
 
 (add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem")
