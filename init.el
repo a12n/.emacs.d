@@ -257,6 +257,12 @@
 (setq make-backup-files t)
 (setq version-control t)
 
+;; Whitespace
+
+(require 'whitespace)
+(setq whitespace-style '(face empty tabs lines trailing))
+(global-whitespace-mode t)
+
 ;; Appearance and behaviour
 
 (defalias 'yes-or-no-p 'y-or-n-p)
