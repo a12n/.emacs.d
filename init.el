@@ -37,6 +37,7 @@
                evil
                jabber
                restclient
+               smex
                tuareg
                yasnippet))
   (unless (package-installed-p pkg)
@@ -86,13 +87,19 @@
 
 (evil-mode 1)
 
-;; Ido
+;; Ido and Smex
 
 (require 'ido)
 
 (ido-mode t)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
+
+(require 'smex)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Buffers
 
