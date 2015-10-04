@@ -35,6 +35,7 @@
                cmake-mode
                color-theme-solarized
                evil
+               evil-numbers
                jabber
                restclient
                smex
