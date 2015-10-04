@@ -240,6 +240,8 @@
 (setq merlin-command 'opam)
 (setq merlin-use-auto-complete-mode 'easy)
 
+(require 'ocp-indent)
+
 ;; Erlang
 
 (let ((path "/usr/local/lib/erlang18/"))
