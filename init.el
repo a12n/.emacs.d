@@ -15,10 +15,10 @@
 
 ;; Sensitive
 
-(load (concat user-emacs-directory
-	      (if arn/at-home
-		  "secret.el"
-		"secret.el.gpg")))
+(dolist (path `(,(concat user-emacs-directory "secret.el")
+                ,(concat user-emacs-directory "secret.el.gpg")))
+  (when (file-exists-p path)
+    (load path)))
 
 ;; Packages
 
