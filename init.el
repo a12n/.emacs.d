@@ -171,6 +171,7 @@
 (setq jabber-history-dir (concat user-emacs-directory "xmpp/"))
 (setq jabber-muc-completion-delimiter ": ")
 (setq jabber-roster-show-empty-group t)
+(setq jabber-roster-show-title nil)
 (setq jabber-roster-sort-functions '(jabber-roster-sort-by-displayname))
 (setq jabber-show-resources 'sometimes)
 (setq jabber-use-global-history nil)
