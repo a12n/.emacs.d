@@ -36,6 +36,7 @@
                color-theme-solarized
                evil
                evil-numbers
+               go-mode
                jabber
                restclient
                smex
