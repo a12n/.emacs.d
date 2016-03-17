@@ -5,4 +5,9 @@ backup/
 elpa/
 org/
 xmpp/
+
 secret.el*
+
+abbrev_defs
+ido.last
+smex-items
