@@ -9,7 +9,7 @@
  '(evil-auto-indent nil)
  '(frame-background-mode (quote dark))
  '(indent-tabs-mode nil)
- '(require-final-newline (quote ask))
+ '(require-final-newline t)
  '(tab-width 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
