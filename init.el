@@ -293,6 +293,8 @@
 (setq tab-always-indent t)
 (setq x-select-enable-primary t)
 
+(set-default 'indicate-empty-lines t)
+
 (auto-compression-mode 1)
 (column-number-mode 1)
 (desktop-save-mode -1)
