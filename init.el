@@ -315,6 +315,7 @@
 
 ;; Bind keys, enable functions
 
+(global-set-key (kbd "C-c =") 'align-regexp)
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
