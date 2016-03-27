@@ -39,6 +39,7 @@
                go-mode
                jabber
                restclient
+               rust-mode
                smex
                tuareg
                yasnippet))
