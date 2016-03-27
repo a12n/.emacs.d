@@ -41,6 +41,7 @@
                restclient
                rust-mode
                smex
+               toml-mode
                tuareg
                yasnippet))
   (unless (package-installed-p pkg)
