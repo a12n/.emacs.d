@@ -266,6 +266,10 @@
 
 (setq lua-indent-level 4)
 
+;; flymake and flycheck
+
+(setq flycheck-display-errors-delay 0.25)
+
 ;; Backup
 
 (setq backup-by-copying t)
