@@ -9,5 +9,6 @@ xmpp/
 secret.el*
 
 abbrev_defs
+ac-comphist.dat
 ido.last
 smex-items
