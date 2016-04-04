@@ -302,6 +302,7 @@
 (set-default 'indicate-empty-lines t)
 
 (auto-compression-mode 1)
+(blink-cursor-mode -1)
 (column-number-mode 1)
 (desktop-save-mode -1)
 (global-hl-line-mode 1)
