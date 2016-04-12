@@ -38,7 +38,6 @@
                evil-numbers
                go-mode
                jabber
-               restclient
                rust-mode
                smex
                toml-mode
