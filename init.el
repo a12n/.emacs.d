@@ -251,6 +251,13 @@
 
 (require 'ocp-indent)
 
+(defun opam-config-env ()
+  (interactive nil)
+  (dolist (var (car (read-from-string
+                     (shell-command-to-string
+                      "opam config env --sexp"))))
+    (setenv (car var) (cadr var))))
+
 ;; Erlang
 
 (let ((path "/usr/local/lib/erlang18/"))
