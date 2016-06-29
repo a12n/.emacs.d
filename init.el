@@ -31,9 +31,9 @@
 (unless (file-exists-p "~/.emacs.d/elpa/archives")
   (package-refresh-contents))
 
-(dolist (pkg '(auto-complete
-               cmake-mode
+(dolist (pkg '(cmake-mode
                color-theme-solarized
+               company
                evil
                evil-numbers
                go-mode
