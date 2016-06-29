@@ -328,11 +328,7 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(cond ((= emacs-major-version 24)
-       (load-theme 'solarized t))
-      ((= emacs-major-version 23)
-       (color-theme-initialize)
-       (color-theme-solarized-dark)))
+(load-theme 'solarized t)
 
 (server-start)
 
