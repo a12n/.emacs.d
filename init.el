@@ -246,7 +246,10 @@
 (require 'merlin)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode)
-(setq merlin-ac-setup 'easy)
+
+(with-eval-after-load 'company
+  (add-to-list 'company-backends 'merlin-company-backend))
+(add-hook 'merlin-mode-hook 'company-mode)
 
 (require 'ocp-indent)
 
