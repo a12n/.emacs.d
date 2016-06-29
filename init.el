@@ -246,7 +246,6 @@
 (require 'merlin)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode)
-(setq merlin-command 'opam)
 (setq merlin-ac-setup 'easy)
 
 (require 'ocp-indent)
