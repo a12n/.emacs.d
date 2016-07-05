@@ -244,11 +244,9 @@
   (add-to-list 'load-path (concat s "/emacs/site-lisp")))
 
 (require 'merlin)
+(require 'merlin-company)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode)
-
-(with-eval-after-load 'company
-  (add-to-list 'company-backends 'merlin-company-backend))
 (add-hook 'merlin-mode-hook 'company-mode)
 
 (require 'ocp-indent)
