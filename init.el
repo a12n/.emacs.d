@@ -292,8 +292,6 @@
 
 (setq whitespace-style '(face empty tabs lines trailing))
 
-(global-whitespace-mode t)
-
 (add-hook 'prog-mode-hook
           (lambda ()
             (add-hook 'before-save-hook 'whitespace-cleanup nil t)))
