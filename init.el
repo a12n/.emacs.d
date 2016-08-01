@@ -34,6 +34,7 @@
 (dolist (pkg '(cmake-mode
                color-theme-solarized
                company
+               deft
                evil
                evil-numbers
                go-mode
@@ -197,6 +198,18 @@
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
+
+;; Deft
+
+(require 'deft)
+
+(setq deft-directory (concat org-directory "deft/"))
+(setq deft-extensions '("org"))
+(setq deft-default-extension "org")
+
+(deft-setup)
+
+(global-set-key (kbd "C-c c") 'deft)
 
 ;; Maxima
 
