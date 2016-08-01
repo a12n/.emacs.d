@@ -191,7 +191,6 @@
 
 (setq org-default-notes-file (concat org-directory "default.org"))
 (setq org-directory "~/org/")
-(setq org-hide-leading-stars t)
 (setq org-modules '(org-habit))
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
