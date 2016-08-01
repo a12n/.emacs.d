@@ -194,7 +194,7 @@
 (setq org-closed-string "ВЫПОЛНЕНО:")
 (setq org-deadline-string "СРОК:")
 (setq org-default-notes-file (concat org-directory "default.org"))
-(setq org-directory (concat user-emacs-directory "org/"))
+(setq org-directory "~/org/")
 (setq org-hide-leading-stars t)
 (setq org-modules '(org-habit))
 (setq org-quote-string "ЦИТАТА")
