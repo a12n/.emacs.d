@@ -189,8 +189,8 @@
 
 (require 'org)
 
-(setq org-default-notes-file (concat org-directory "default.org"))
 (setq org-directory "~/org/")
+(setq org-default-notes-file (concat org-directory "notes.org"))
 (setq org-modules '(org-habit))
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
