@@ -41,7 +41,6 @@
                go-mode
                jabber
                rust-mode
-               smex
                toml-mode
                tuareg
                yasnippet))
@@ -108,11 +107,11 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 
-(require 'smex)
-
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(use-package smex
+  :bind
+  ("M-x" . smex)
+  ("M-X" . smex-major-mode-commands)
+  )
 
 ;; Buffers
 
