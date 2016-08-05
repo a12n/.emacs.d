@@ -28,8 +28,11 @@
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-(unless (file-exists-p "~/.emacs.d/elpa/archives")
-  (package-refresh-contents))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(setq use-package-always-ensure t)
 
 (dolist (pkg '(cmake-mode
                color-theme-solarized
