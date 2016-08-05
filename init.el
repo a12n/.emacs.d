@@ -37,7 +37,6 @@
 (dolist (pkg '(cmake-mode
                color-theme-solarized
                company
-               deft
                go-mode
                jabber
                rust-mode
@@ -203,15 +202,14 @@
 
 ;; Deft
 
-(require 'deft)
-
-(setq deft-directory (concat org-directory "deft/"))
-(setq deft-extensions '("org"))
-(setq deft-default-extension "org")
-
-(deft-setup)
-
-(global-set-key (kbd "C-c c") 'deft)
+(use-package deft
+  :bind ("C-c c" . deft)
+  :config
+  (setq deft-directory (concat org-directory "deft/"))
+  (setq deft-extensions '("org"))
+  (setq deft-default-extension "org")
+  (deft-setup)
+  )
 
 ;; Maxima
 
