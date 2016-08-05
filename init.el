@@ -38,7 +38,6 @@
                color-theme-solarized
                company
                deft
-               evil
                evil-numbers
                go-mode
                jabber
@@ -92,9 +91,9 @@
 
 ;; Evil
 
-(require 'evil)
-
-(evil-mode 1)
+(use-package evil
+  :config (evil-mode 1)
+  )
 
 (require 'evil-numbers)
 
