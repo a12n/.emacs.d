@@ -42,8 +42,7 @@
                jabber
                rust-mode
                toml-mode
-               tuareg
-               yasnippet))
+               tuareg))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
@@ -130,9 +129,9 @@
 
 ;; YASnippet
 
-(require 'yasnippet)
-
-(yas-global-mode 1)
+(use-package yasnippet
+  :config (yas-global-mode 1)
+  )
 
 ;; Jabber
 
