@@ -10,5 +10,6 @@ secret.el*
 
 abbrev_defs
 ac-comphist.dat
+bookmarks
 ido.last
 smex-items
