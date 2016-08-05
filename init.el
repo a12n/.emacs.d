@@ -336,6 +336,7 @@
 
 (global-set-key (kbd "C-c =") 'align-regexp)
 (global-set-key (kbd "C-c \\") 'sort-lines)
+(global-set-key (kbd "C-c w") 'woman)
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
