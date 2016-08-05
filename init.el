@@ -34,16 +34,17 @@
 
 (setq use-package-always-ensure t)
 
-(dolist (pkg '(cmake-mode
-               color-theme-solarized
-               company
-               go-mode
-               jabber
-               rust-mode
-               toml-mode
-               tuareg))
+(dolist (pkg '(color-theme-solarized
+               jabber))
   (unless (package-installed-p pkg)
     (package-install pkg)))
+
+(use-package cmake-mode)
+(use-package company)
+(use-package go-mode)
+(use-package rust-mode)
+(use-package toml-mode)
+(use-package tuareg)
 
 ;; Calendar
 
