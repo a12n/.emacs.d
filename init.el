@@ -93,7 +93,7 @@
   ("C-c -" . evil-numbers/dec-at-pt)
   )
 
-;; Ido and Smex
+;; Ido, Smex, avy
 
 (require 'ido)
 
@@ -105,6 +105,10 @@
   :bind
   ("M-x" . smex)
   ("M-X" . smex-major-mode-commands)
+  )
+
+(use-package avy
+  :bind ("M-g" . avy-goto-word-1)
   )
 
 ;; Buffers
