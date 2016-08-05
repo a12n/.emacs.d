@@ -85,6 +85,8 @@
 (setq smtpmail-smtp-user user-mail-address)
 (setq smtpmail-stream-type 'starttls)
 
+(global-set-key (kbd "C-c m") 'mu4e)
+
 ;; Evil
 
 (require 'evil)
