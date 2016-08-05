@@ -34,8 +34,7 @@
 
 (setq use-package-always-ensure t)
 
-(dolist (pkg '(color-theme-solarized
-               jabber))
+(dolist (pkg '(jabber))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
@@ -331,7 +330,11 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(load-theme 'solarized t)
+;; https://github.com/sellout/emacs-color-theme-solarized/pull/187
+(unless (boundp 'color-themes) (setq color-themes '()))
+(use-package color-theme-solarized
+  :config (load-theme 'solarized t)
+  )
 
 (server-start)
 
