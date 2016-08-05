@@ -300,6 +300,10 @@
           (lambda ()
             (add-hook 'before-save-hook 'whitespace-cleanup nil t)))
 
+(use-package shrink-whitespace
+  :bind ("M-S-SPC" . shrink-whitespace)
+  )
+
 ;; Appearance and behaviour
 
 (defalias 'yes-or-no-p 'y-or-n-p)
