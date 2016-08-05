@@ -4,6 +4,7 @@ auto-save-list/
 backup/
 elpa/
 org/
+url/
 xmpp/
 
 secret.el*
