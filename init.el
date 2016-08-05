@@ -38,7 +38,6 @@
                color-theme-solarized
                company
                deft
-               evil-numbers
                go-mode
                jabber
                rust-mode
@@ -95,10 +94,11 @@
   :config (evil-mode 1)
   )
 
-(require 'evil-numbers)
-
-(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
-(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(use-package evil-numbers
+  :bind
+  ("C-c +" . evil-numbers/inc-at-pt)
+  ("C-c -" . evil-numbers/dec-at-pt)
+  )
 
 ;; Ido and Smex
 
