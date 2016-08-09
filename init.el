@@ -34,6 +34,7 @@
 
 (setq use-package-always-ensure t)
 
+(use-package aggressive-indent)
 (use-package cmake-mode)
 (use-package company)
 (use-package go-mode)
