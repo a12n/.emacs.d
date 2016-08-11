@@ -3,6 +3,7 @@ syntax: glob
 auto-save-list/
 backup/
 elpa/
+jabber-history/
 org/
 url/
 xmpp/
