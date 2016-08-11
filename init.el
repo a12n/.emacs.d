@@ -171,7 +171,6 @@
   (setq jabber-events-confirm-displayed nil)
   (setq jabber-history-enabled t)
   (setq jabber-history-size-limit 2048)
-  (setq jabber-history-dir (concat user-emacs-directory "xmpp/"))
   (setq jabber-muc-completion-delimiter ": ")
   (setq jabber-roster-show-empty-group t)
   (setq jabber-roster-show-title nil)
