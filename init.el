@@ -192,6 +192,7 @@
 
 (setq org-directory "~/org/")
 (setq org-default-notes-file (concat org-directory "notes.org"))
+(setq org-log-into-drawer t)
 (setq org-modules '(org-habit))
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
