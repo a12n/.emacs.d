@@ -192,6 +192,7 @@
 
 (setq org-directory "~/org/")
 (setq org-default-notes-file (concat org-directory "notes.org"))
+(setq org-clock-idle-time 10)
 (setq org-log-into-drawer t)
 (setq org-modules '(org-habit))
 
