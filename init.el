@@ -278,6 +278,8 @@
     (add-to-list 'exec-path (concat erlang-root-dir "bin/"))
     (require 'erlang-start)))
 
+(add-to-list 'auto-mode-alist '("rebar\\.config" . erlang-mode))
+
 ;; Lua
 
 (setq lua-indent-level 4)
