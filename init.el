@@ -278,6 +278,7 @@
     (add-to-list 'exec-path (concat erlang-root-dir "bin/"))
     (require 'erlang-start)))
 
+(add-to-list 'auto-mode-alist '("elvis\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("rebar\\.config" . erlang-mode))
 
 ;; Lua
