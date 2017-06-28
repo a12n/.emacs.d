@@ -280,6 +280,7 @@
 
 (add-to-list 'auto-mode-alist '("elvis\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("rebar\\.config" . erlang-mode))
+(add-to-list 'auto-mode-alist '("sys\\.config" . erlang-mode))
 
 ;; Lua
 
