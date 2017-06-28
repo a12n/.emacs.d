@@ -81,6 +81,9 @@
 (setq smtpmail-smtp-user user-mail-address)
 (setq smtpmail-stream-type 'starttls)
 
+;; gnutls-cli --strict-tofu --starttls-proto=smtp $(smtpmail-smtp-server)
+(setq starttls-extra-arguments '("--strict-tofu"))
+
 (global-set-key (kbd "C-c m") 'mu4e)
 
 ;; Evil
