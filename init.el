@@ -37,6 +37,7 @@
 (use-package aggressive-indent)
 (use-package cmake-mode)
 (use-package company)
+(use-package fstar-mode)
 (use-package go-mode)
 (use-package markdown-mode)
 (use-package rust-mode)
