@@ -345,10 +345,8 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-;; https://github.com/sellout/emacs-color-theme-solarized/pull/187
-(unless (boundp 'color-themes) (setq color-themes '()))
-(use-package color-theme-solarized
-  :config (load-theme 'solarized t)
+(use-package color-theme-sanityinc-solarized
+  :config (load-theme 'sanityinc-solarized-dark t)
   )
 
 (server-start)
