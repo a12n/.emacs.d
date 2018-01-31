@@ -41,7 +41,6 @@
 (use-package go-mode)
 (use-package markdown-mode)
 (use-package rust-mode)
-(use-package toml-mode)
 (use-package tuareg)
 
 ;; Calendar
