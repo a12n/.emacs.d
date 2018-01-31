@@ -137,58 +137,6 @@
   :config (yas-global-mode 1)
   )
 
-;; Jabber
-
-
-(use-package jabber
-  :config
-  (add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem")
-  (setq arn/jabber-resource
-        (if arn/at-home
-            "Hejmloke"
-          "Laborloke"))
-  (setq arn/jabber-priority
-        (if arn/at-home
-            32
-          64))
-  (setq fsm-debug nil)
-  (setq jabber-account-list
-        `((,(concat arn/jabber-id "/" arn/jabber-resource)
-           (:connection-type . starttls)
-           (:password . ,arn/jabber-password))))
-  (setq jabber-use-sasl t)
-  (setq jabber-connection-ssl-program 'gnutls)
-  (setq jabber-activity-count-in-title t)
-  (setq jabber-auto-reconnect t)
-  (setq jabber-autoaway-method 'jabber-xprintidle-get-idle-time)
-  (setq jabber-autoaway-verbose t)
-  (setq jabber-backlog-days 7)
-  (setq jabber-backlog-number 128)
-  (setq jabber-chat-buffer-show-avatar nil)
-  (setq jabber-chat-delayed-time-format "%Y-%m-%d %H:%M:%S%z")
-  (setq jabber-chat-fill-long-lines nil)
-  (setq jabber-chat-time-format "%H:%M:%S")
-  (setq jabber-chatstates-confirm nil)
-  (setq jabber-default-priority arn/jabber-priority)
-  (setq jabber-events-confirm-composing nil)
-  (setq jabber-events-confirm-delivered nil)
-  (setq jabber-events-confirm-displayed nil)
-  (setq jabber-history-enabled t)
-  (setq jabber-history-size-limit 2048)
-  (setq jabber-muc-completion-delimiter ": ")
-  (setq jabber-roster-show-empty-group t)
-  (setq jabber-roster-show-title nil)
-  (setq jabber-roster-sort-functions '(jabber-roster-sort-by-displayname))
-  (setq jabber-show-resources 'sometimes)
-  (setq jabber-use-global-history nil)
-  (setq jabber-vcard-avatars-retrieve nil)
-  (jabber-activity-mode 1)
-  (jabber-mode-line-mode 1)
-  (add-hook 'jabber-chat-mode-hook 'flyspell-mode)
-  (add-hook 'jabber-post-connect-hooks 'jabber-autoaway-start)
-  :init (setq dired-bind-jump nil)
-  )
-
 ;; Org and remember
 
 (require 'org)
