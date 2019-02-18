@@ -40,6 +40,7 @@
 (use-package company)
 (use-package fstar-mode)
 (use-package go-mode)
+(use-package indent-tools)
 (use-package markdown-mode)
 (use-package rust-mode)
 (use-package tuareg)
