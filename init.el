@@ -43,6 +43,7 @@
 (use-package markdown-mode)
 (use-package rust-mode)
 (use-package tuareg)
+(use-package yaml-mode)
 
 ;; Calendar
 
