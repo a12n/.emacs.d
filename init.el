@@ -156,17 +156,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
-;; Deft
-
-(use-package deft
-  :bind ("C-c c" . deft)
-  :config
-  (setq deft-directory (concat org-directory "deft/"))
-  (setq deft-extensions '("org"))
-  (setq deft-default-extension "org")
-  (deft-setup)
-  )
-
 ;; Maxima
 
 (setq imaxima-fnt-size "LARGE")
