@@ -296,8 +296,8 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(use-package color-theme-sanityinc-solarized
-  :config (load-theme 'sanityinc-solarized-dark t)
+(use-package gruvbox-theme
+  :config (load-theme 'gruvbox-dark-medium)
   )
 
 (server-start)
