@@ -81,6 +81,7 @@
 (setq message-send-mail-function 'smtpmail-send-it)
 (setq smtpmail-smtp-server
       (replace-regexp-in-string "^\\w+@" "mail." user-mail-address))
+(setq smtpmail-smtp-service "submission")
 (setq smtpmail-smtp-user user-mail-address)
 (setq smtpmail-stream-type 'starttls)
 
