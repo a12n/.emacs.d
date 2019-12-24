@@ -56,7 +56,6 @@
 ;; Email
 
 (setq user-full-name "Anton Yabchinskiy")
-(setq user-mail-address (getenv "EMAIL"))
 
 (require 'mu4e)
 
