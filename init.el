@@ -190,8 +190,9 @@
 
 ;; OCaml
 
-(let ((s (substring (shell-command-to-string "opam config var share") 0 -1)))
-  (add-to-list 'load-path (concat s "/emacs/site-lisp")))
+(let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
+  (when (and opam-share (file-directory-p opam-share))
+    (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))))
 
 (require 'dune)
 (require 'merlin)
