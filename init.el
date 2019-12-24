@@ -193,6 +193,7 @@
 (let ((s (substring (shell-command-to-string "opam config var share") 0 -1)))
   (add-to-list 'load-path (concat s "/emacs/site-lisp")))
 
+(require 'dune)
 (require 'merlin)
 (require 'merlin-company)
 
