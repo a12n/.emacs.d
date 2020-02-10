@@ -211,7 +211,9 @@
                       "opam config env --sexp"))))
     (setenv (car var) (cadr var))))
 
-;; Erlang
+;; Erlang and Elixir
+
+(use-package elixir-mode)
 
 (let ((path "/usr/local/lib/erlang18/"))
   (when (file-accessible-directory-p path)
