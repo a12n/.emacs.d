@@ -9,7 +9,7 @@ leaving only last N path elements."
          (path (mapconcat 'identity (last path-elements n) "_"))
          (upcased-path (upcase path))
          (replaced-path (replace-regexp-in-string "[^A-Z0-9_]" "_" upcased-path)))
-    (format "__%s_INCLUDED__" replaced-path)))
+    (format "%s" replaced-path)))
 
 (defun include-guard-header (guard)
   "Generates include guard file header for a given GUARD."
