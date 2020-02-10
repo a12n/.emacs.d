@@ -13,10 +13,7 @@ leaving only last N path elements."
 
 (defun include-guard-header (guard)
   "Generates include guard file header for a given GUARD."
-  (concat "\n"
-          "#pragma once\n"
-          "\n"
-          "#ifndef " guard "\n"
+  (concat "#ifndef " guard "\n"
           "#define " guard "\n"
           "\n"))
 
