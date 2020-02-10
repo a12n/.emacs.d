@@ -233,7 +233,10 @@
 
 ;; flymake and flycheck
 
-(setq flycheck-display-errors-delay 0.25)
+(use-package flycheck
+  :init (setq flycheck-display-errors-delay 0.25)
+  :config (global-flycheck-mode)
+  )
 
 ;; Backup
 
