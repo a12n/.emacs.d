@@ -37,9 +37,7 @@
 (setq use-package-always-ensure t)
 
 (use-package aggressive-indent)
-(use-package cmake-mode)
 (use-package company)
-(use-package fstar-mode)
 (use-package go-mode)
 (use-package indent-tools)
 (use-package markdown-mode)
@@ -91,12 +89,6 @@
 
 (use-package evil
   :config (evil-mode 1)
-  )
-
-(use-package evil-numbers
-  :bind
-  ("C-c +" . evil-numbers/inc-at-pt)
-  ("C-c -" . evil-numbers/dec-at-pt)
   )
 
 ;; Ido, Smex, avy
