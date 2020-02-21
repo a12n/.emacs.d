@@ -11,7 +11,7 @@
  '(indent-tabs-mode nil)
  '(package-selected-packages
    (quote
-    (gruvbox-theme indent-tools yasnippet yaml-mode use-package tuareg smex shrink-whitespace rust-mode markdown-mode jabber go-mode fstar-mode evil-numbers evil elixir-mode company cmake-mode avy aggressive-indent)))
+    (gruvbox-theme shrink-whitespace elixir-mode yasnippet-snippets yaml-mode use-package tuareg tabbar smex session rust-mode pod-mode muttrc-mode mutt-alias markdown-mode initsplit htmlize graphviz-dot-mode go-mode folding flycheck-rtags evil eproject diminish csv-mode company-rtags browse-kill-ring boxquote bm bar-cursor avy apache-mode)))
  '(require-final-newline t)
  '(tab-width 4))
 (custom-set-faces
