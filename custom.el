@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("c856158cc996d52e2f48190b02f6b6f26b7a9abd5fea0c6ffca6740a1003b333" "a5956ec25b719bf325e847864e16578c61d8af3e8a3d95f60f9040d02497e408" default)))
+    ("2b9dc43b786e36f68a9fd4b36dd050509a0e32fe3b0a803310661edb7402b8b6" "8f97d5ec8a774485296e366fdde6ff5589cf9e319a584b845b6f7fa788c9fa9a" default)))
  '(evil-auto-indent nil)
  '(frame-background-mode (quote dark))
  '(indent-tabs-mode nil)
