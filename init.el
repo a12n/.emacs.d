@@ -178,6 +178,10 @@
 
 (add-hook 'c-mode-common-hook (lambda () (setq show-trailing-whitespace t)))
 
+(use-package rtags
+  :config
+  (rtags-start-process-unless-running))
+
 ;; Haskell
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
