@@ -37,7 +37,8 @@
 (setq use-package-always-ensure t)
 
 (use-package aggressive-indent)
-(use-package company)
+(use-package company
+  :config (global-company-mode))
 (use-package go-mode)
 (use-package indent-tools)
 (use-package markdown-mode)
