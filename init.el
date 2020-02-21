@@ -180,6 +180,7 @@
 
 (use-package rtags
   :config
+  (rtags-enable-standard-keybindings)
   (rtags-start-process-unless-running))
 
 ;; Haskell
