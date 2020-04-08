@@ -1,5 +1,3 @@
-(setq arn/at-home (string-match "^mithlond" (system-name)))
-
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
 ;; Custom
