@@ -129,7 +129,15 @@
 
 (require 'include-guard)
 
+(c-add-style "arn/cc-style"
+             '("stroustrup"
+               (c-offsets-alist (inline-open . 0)
+                                (innamespace . -))))
 (setq c-tab-always-indent nil)
+(setq c-default-style
+      '((c++-mode . "arn/cc-style")
+        (c-mode . "arn/cc-style")
+        ))
 
 ;; OCaml
 
