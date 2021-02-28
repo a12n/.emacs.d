@@ -26,7 +26,6 @@
   :config (global-company-mode))
 (use-package indent-tools)
 (use-package markdown-mode)
-(use-package tuareg)
 (use-package yaml-mode)
 
 ;; Calendar
@@ -133,6 +132,8 @@
 (setq c-tab-always-indent nil)
 
 ;; OCaml
+
+(use-package tuareg)
 
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
   (when (and opam-share (file-directory-p opam-share))
