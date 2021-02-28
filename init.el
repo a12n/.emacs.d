@@ -128,16 +128,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
-;; Maxima
-
-(setq imaxima-fnt-size "LARGE")
-
-;; Ada
-
-(setq ada-case-identifier 'ada-no-auto-case)
-(setq ada-indent-is-separate nil)
-(setq ada-language-version 'ada2005)
-
 ;; C, C++
 
 (require 'include-guard)
@@ -203,10 +193,6 @@
 (add-to-list 'auto-mode-alist '("elvis\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("rebar\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("sys\\.config" . erlang-mode))
-
-;; Lua
-
-(setq lua-indent-level 4)
 
 ;; flymake and flycheck
 
