@@ -77,7 +77,7 @@
   :config (evil-mode 1)
   )
 
-;; Ido, Smex, avy
+;; Ido, Smex
 
 (require 'ido)
 
@@ -89,10 +89,6 @@
   :bind
   ("M-x" . smex)
   ("M-X" . smex-major-mode-commands)
-  )
-
-(use-package avy
-  :bind ("M-g" . avy-goto-word-1)
   )
 
 ;; Buffers
