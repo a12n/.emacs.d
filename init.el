@@ -5,19 +5,6 @@
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file)
 
-;; Easy PG
-
-(require 'epa-file)
-
-(setq epa-armor t)
-
-;; Sensitive
-
-(dolist (path `(,(concat user-emacs-directory "secret.el")
-                ,(concat user-emacs-directory "secret.el.gpg")))
-  (when (file-exists-p path)
-    (load path)))
-
 ;; Packages
 
 (require 'package)
