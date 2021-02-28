@@ -133,20 +133,19 @@
 
 ;; OCaml
 
+(use-package dune)
+(use-package merlin)
+(use-package ocp-indent)
 (use-package tuareg)
 
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
   (when (and opam-share (file-directory-p opam-share))
     (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))))
 
-(require 'dune)
-(require 'merlin)
 (require 'merlin-company)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'merlin-mode-hook 'company-mode)
-
-(require 'ocp-indent)
 
 (defun opam-config-env ()
   (interactive nil)
