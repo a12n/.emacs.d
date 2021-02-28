@@ -132,10 +132,6 @@
 
 (setq c-tab-always-indent nil)
 
-;; Haskell
-
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-
 ;; OCaml
 
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
