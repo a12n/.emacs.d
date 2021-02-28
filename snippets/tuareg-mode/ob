@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: open Batteries
-# key: ob
-# --
-open Batteries
-
-$0
