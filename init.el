@@ -97,10 +97,8 @@
 
 ;; Buffers
 
-(require 'midnight)
 (require 'uniquify)
 
-(midnight-delay-set 'midnight-delay (* 5 60 60))
 (setq uniquify-buffer-name-style 'post-forward)
 
 ;; EDiff
