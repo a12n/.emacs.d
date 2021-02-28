@@ -158,14 +158,6 @@
 
 (use-package elixir-mode)
 
-(let ((path "/usr/local/lib/erlang18/"))
-  (when (file-accessible-directory-p path)
-    (setq erlang-root-dir path)
-    ;; FIXME: Handle tools version
-    (add-to-list 'load-path (concat erlang-root-dir "lib/tools-2.8/emacs/"))
-    (add-to-list 'exec-path (concat erlang-root-dir "bin/"))
-    (require 'erlang-start)))
-
 (add-to-list 'auto-mode-alist '("elvis\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("rebar\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("sys\\.config" . erlang-mode))
