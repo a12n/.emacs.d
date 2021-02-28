@@ -138,21 +138,10 @@
 (use-package ocp-indent)
 (use-package tuareg)
 
-(let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
-  (when (and opam-share (file-directory-p opam-share))
-    (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))))
-
 (require 'merlin-company)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'merlin-mode-hook 'company-mode)
-
-(defun opam-config-env ()
-  (interactive nil)
-  (dolist (var (car (read-from-string
-                     (shell-command-to-string
-                      "opam config env --sexp"))))
-    (setenv (car var) (cadr var))))
 
 ;; Erlang and Elixir
 
