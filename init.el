@@ -24,10 +24,8 @@
 (use-package aggressive-indent)
 (use-package company
   :config (global-company-mode))
-(use-package go-mode)
 (use-package indent-tools)
 (use-package markdown-mode)
-(use-package rust-mode)
 (use-package tuareg)
 (use-package yaml-mode)
 
