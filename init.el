@@ -43,6 +43,7 @@
 
 (setq mu4e-maildir (concat "~/mail/" user-mail-address))
 
+(setq mu4e-change-filenames-when-moving t)
 (setq mu4e-compose-signature-auto-include nil)
 (setq mu4e-confirm-quit nil)
 (setq mu4e-drafts-folder "/Drafts")
