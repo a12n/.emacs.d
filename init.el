@@ -167,6 +167,16 @@
   :config (global-flycheck-mode)
   )
 
+;; Backup
+
+(setq backup-by-copying t)
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backup/"))))
+(setq delete-old-versions t)
+(setq kept-new-versions 2)
+(setq kept-old-versions 5)
+(setq make-backup-files t)
+(setq version-control t)
+
 ;; Whitespace
 
 (require 'whitespace)
