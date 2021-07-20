@@ -41,19 +41,13 @@
 
 (require 'mu4e)
 
-(setq mu4e-maildir (concat "~/mail/" user-mail-address))
-
 (setq mu4e-change-filenames-when-moving t)
 (setq mu4e-compose-signature-auto-include nil)
 (setq mu4e-confirm-quit nil)
-(setq mu4e-drafts-folder "/Drafts")
 (setq mu4e-headers-date-format "%Y-%m-%d")
-(setq mu4e-mu-home (expand-file-name "~/mail/.mu"))
-(setq mu4e-refile-folder "/Archive")
-(setq mu4e-sent-folder "/Sent")
-(setq mu4e-trash-folder "/Trash")
 (setq mu4e-update-interval 150)
 (setq mu4e-view-show-addresses t)
+(setq mu4e-compose-context-policy 'always-ask)
 
 (setq mail-user-agent 'mu4e-user-agent)
 
@@ -61,13 +55,39 @@
 
 (setq message-kill-buffer-on-exit t)
 (setq message-send-mail-function 'smtpmail-send-it)
-(setq smtpmail-smtp-server
-      (replace-regexp-in-string "^\\w+@" "mail." user-mail-address))
 (setq smtpmail-smtp-service "submission")
-(setq smtpmail-smtp-user user-mail-address)
 (setq smtpmail-stream-type 'starttls)
 
 (global-set-key (kbd "C-c m") 'mu4e)
+
+(setq mu4e-contexts
+      (list (let* ((name "bestmx")
+                   (host (concat name ".net")))
+              (make-mu4e-context
+               :name name
+               :match-func (lambda (msg) nil)
+               :vars `((user-mail-address . ,(concat (user-login-name) "@" host))
+                       (mu4e-drafts-folder . ,(concat "/" name "/Drafts"))
+                       (mu4e-refile-folder . ,(concat "/" name "/Archive"))
+                       (mu4e-sent-folder . ,(concat "/" name "/Sent"))
+                       (mu4e-trash-folder . ,(concat "/" name "/Trash"))
+                       (smtpmail-smtp-server . ,(concat "mail." host))
+                       (smtpmail-smtp-user . ,user-mail-address)
+                       )))
+            (let* ((name "intabs")
+                   (host (concat name ".net")))
+              (make-mu4e-context
+               :name name
+               :match-func (lambda (msg) nil)
+               :vars `((user-mail-address . ,(concat (user-login-name) "@" host))
+                       (mu4e-drafts-folder . ,(concat "/" name "/Drafts"))
+                       (mu4e-refile-folder . ,(concat "/" name "/Archive"))
+                       (mu4e-sent-folder . ,(concat "/" name "/Sent"))
+                       (mu4e-trash-folder . ,(concat "/" name "/Trash"))
+                       (smtpmail-smtp-server . ,host)
+                       (smtpmail-smtp-user . ,(user-login-name))
+                       )))
+            ))
 
 ;; Evil
 
