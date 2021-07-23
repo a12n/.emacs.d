@@ -65,7 +65,9 @@
                    (host (concat name ".net")))
               (make-mu4e-context
                :name name
-               :match-func (lambda (msg) nil)
+               :match-func `(lambda (msg)
+                              (when msg
+                                (mu4e-message-contact-field-matches msg '(:from :to) ,name)))
                :vars `((user-mail-address . ,(concat (user-login-name) "@" host))
                        (mu4e-drafts-folder . ,(concat "/" name "/Drafts"))
                        (mu4e-refile-folder . ,(concat "/" name "/Archive"))
@@ -78,7 +80,9 @@
                    (host (concat name ".net")))
               (make-mu4e-context
                :name name
-               :match-func (lambda (msg) nil)
+               :match-func `(lambda (msg)
+                              (when msg
+                                (mu4e-message-contact-field-matches msg '(:from :to) ,name)))
                :vars `((user-mail-address . ,(concat (user-login-name) "@" host))
                        (mu4e-drafts-folder . ,(concat "/" name "/Drafts"))
                        (mu4e-refile-folder . ,(concat "/" name "/Archive"))
