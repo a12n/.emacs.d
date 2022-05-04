@@ -101,6 +101,10 @@
   :config (evil-mode 1)
   )
 
+(add-to-list
+ 'undo-tree-history-directory-alist
+ `("." . ,(concat user-emacs-directory "undo-tree")))
+
 ;; Ido, Smex
 
 (require 'ido)
