@@ -158,6 +158,13 @@
 
 ;; C, C++
 
+(use-package ggtags
+  :config
+  (add-hook 'c-mode-common-hook
+            (lambda ()
+              (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+                (ggtags-mode t)))))
+
 (require 'include-guard)
 
 (c-add-style "arn/cc-style"
