@@ -98,7 +98,9 @@
 ;; Evil
 
 (use-package evil
-  :config (evil-mode 1)
+  :config
+  (setq evil-undo-system 'undo-redo)
+  (evil-mode 1)
   )
 
 (add-to-list
