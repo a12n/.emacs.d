@@ -236,6 +236,7 @@
 (setq scroll-margin 4)
 (setq show-paren-style 'mixed)
 (setq tab-always-indent t)
+(setq warning-minimum-level :error)
 (setq x-select-enable-primary t)
 
 (set-default 'indicate-empty-lines t)
