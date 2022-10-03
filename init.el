@@ -1,5 +1,12 @@
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
+(if (not (fboundp 'string-replace))
+    (progn
+      (defun string-replace (from to in)
+        (replace-regexp-in-string (regexp-quote from) to in nil 'literal))
+      (declare-function string-replace "init")
+      ))
+
 ;; Custom
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
