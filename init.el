@@ -69,7 +69,6 @@
                               (when msg
                                 (mu4e-message-contact-field-matches msg '(:from :to) ,name)))
                :vars `((user-mail-address . ,(concat (user-login-name) "@" host))
-                       (mu4e-get-mail-command . ,(concat "mbsync " name))
                        (mu4e-drafts-folder . ,(concat "/" name "/Drafts"))
                        (mu4e-refile-folder . ,(concat "/" name "/Archive"))
                        (mu4e-sent-folder . ,(concat "/" name "/Sent"))
@@ -85,7 +84,6 @@
                               (when msg
                                 (mu4e-message-contact-field-matches msg '(:from :to) ,name)))
                :vars `((user-mail-address . ,(concat (user-login-name) "@" host))
-                       (mu4e-get-mail-command . ,(concat "mbsync " name))
                        (mu4e-drafts-folder . ,(concat "/" name "/Drafts"))
                        (mu4e-refile-folder . ,(concat "/" name "/Archive"))
                        (mu4e-sent-folder . ,(concat "/" name "/Sent"))
