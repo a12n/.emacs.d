@@ -98,6 +98,21 @@
                        (smtpmail-smtp-server . ,host)
                        (smtpmail-smtp-user . ,(user-login-name))
                        )))
+            (let* ((name "yandex")
+                   (host (concat name ".ru"))
+                   (user (string-replace " " "." (downcase user-full-name))))
+              (make-mu4e-context
+               :name name
+               :vars `((user-mail-address . ,(concat user "@" host))
+                       (mu4e-drafts-folder . ,(concat "/" name "/Drafts"))
+                       (mu4e-refile-folder . ,(concat "/" name "/Archive"))
+                       (mu4e-sent-folder . ,(concat "/" name "/Sent"))
+                       (mu4e-trash-folder . ,(concat "/" name "/Trash"))
+                       (smtpmail-smtp-server . ,(concat "smtp." host))
+                       (smtpmail-smtp-service . 465)
+                       (smtpmail-smtp-user . ,user)
+                       (smtpmail-stream-type . 'ssl)
+                       )))
             ))
 
 ;; Evil
