@@ -112,6 +112,7 @@
                        (smtpmail-smtp-service . 465)
                        (smtpmail-smtp-user . ,user)
                        (smtpmail-stream-type . ssl)
+                       (smtpmail-servers-requiring-authorization . ,(regexp-quote smtpmail-smtp-server))
                        )))
             ))
 
