@@ -111,7 +111,7 @@
                        (smtpmail-smtp-server . ,(concat "smtp." host))
                        (smtpmail-smtp-service . 465)
                        (smtpmail-smtp-user . ,user)
-                       (smtpmail-stream-type . 'ssl)
+                       (smtpmail-stream-type . ssl)
                        )))
             ))
 
