@@ -49,12 +49,12 @@
 (require 'mu4e)
 
 (setq mu4e-change-filenames-when-moving t)
+(setq mu4e-compose-context-policy 'always-ask)
 (setq mu4e-compose-signature-auto-include nil)
 (setq mu4e-confirm-quit nil)
 (setq mu4e-headers-date-format "%Y-%m-%d")
 (setq mu4e-update-interval 150)
 (setq mu4e-view-show-addresses t)
-(setq mu4e-compose-context-policy 'always-ask)
 
 (setq mail-user-agent 'mu4e-user-agent)
 
