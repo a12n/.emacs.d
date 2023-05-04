@@ -30,7 +30,10 @@
 
 (use-package aggressive-indent)
 (use-package company
-  :config (global-company-mode))
+  :config
+  (setq company-minimum-prefix-length 1)
+  (global-company-mode)
+  )
 (use-package indent-tools)
 (use-package markdown-mode)
 (use-package yaml-mode)
