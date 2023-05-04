@@ -204,6 +204,14 @@
         (c-mode . "arn/cc-style")
         ))
 
+;; Go
+
+(use-package go-mode
+  :config
+  (add-hook 'go-mode-hook #'lsp-deferred)
+  )
+(use-package lsp-mode)
+
 ;; OCaml
 
 (use-package dune)
