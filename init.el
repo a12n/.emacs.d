@@ -284,7 +284,11 @@
 (tooltip-mode -1)
 
 (use-package gruvbox-theme
-  :config (load-theme 'gruvbox-dark-medium)
+  :config
+  (load-theme 'gruvbox-dark-medium)
+  :custom-face
+  (diff-refine-added ((t (:background "#79740e" :foreground "#b8bb26"))))
+  (diff-refine-removed ((t (:background "#9d0006" :foreground "#fb4933"))))
   )
 
 (server-start)
