@@ -212,12 +212,10 @@
 
 (use-package dune)
 (use-package merlin)
-(use-package merlin-company)
 (use-package ocp-indent)
 (use-package tuareg)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode)
-(add-hook 'merlin-mode-hook 'company-mode)
 
 ;; Erlang and Elixir
 
