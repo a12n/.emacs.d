@@ -184,6 +184,7 @@
 
 ;; C, C++
 
+(use-package clang-format)
 (use-package ggtags
   :config
   (add-hook 'c-mode-common-hook
