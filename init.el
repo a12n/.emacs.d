@@ -35,6 +35,7 @@
   (global-company-mode)
   )
 (use-package indent-tools)
+(use-package lsp-mode)
 (use-package markdown-mode)
 (use-package yaml-mode)
 
@@ -206,7 +207,6 @@
   :config
   (add-hook 'go-mode-hook #'lsp-deferred)
   )
-(use-package lsp-mode)
 
 ;; OCaml
 
