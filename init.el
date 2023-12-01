@@ -171,6 +171,7 @@
 (setq org-default-notes-file (concat org-directory "notes.org"))
 (setq org-clock-idle-time 10)
 (setq org-clock-persist t)
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
 (setq org-log-into-drawer t)
 (setq org-modules '(org-habit))
 
