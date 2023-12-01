@@ -212,6 +212,7 @@
 
 (use-package dune)
 (use-package merlin)
+(use-package ocamlformat)
 (use-package ocp-indent)
 (use-package tuareg)
 
