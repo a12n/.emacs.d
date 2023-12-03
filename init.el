@@ -218,6 +218,7 @@
 (use-package ocamlformat)
 (use-package ocp-indent)
 (use-package tuareg)
+(use-package utop)
 
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 
