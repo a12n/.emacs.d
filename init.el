@@ -36,6 +36,7 @@
   )
 (use-package indent-tools)
 (use-package lsp-mode)
+(use-package magit)
 (use-package markdown-mode)
 (use-package rainbow-mode)
 (use-package yaml-mode)
