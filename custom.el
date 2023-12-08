@@ -9,7 +9,7 @@
  '(evil-intercept-maps '((edebug-mode-map) (ggtags-mode-map)))
  '(indent-tabs-mode nil)
  '(package-selected-packages
-   '(company ocp-indent merlin dune tuareg yaml-mode markdown-mode indent-tools aggressive-indent avy yasnippet smex use-package gruvbox-theme evil))
+   '(magit utop company ocp-indent merlin dune tuareg yaml-mode markdown-mode indent-tools aggressive-indent avy yasnippet smex use-package gruvbox-theme evil))
  '(require-final-newline t)
  '(tab-width 4))
 (custom-set-faces
