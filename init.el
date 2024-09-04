@@ -39,6 +39,7 @@
 (use-package magit)
 (use-package markdown-mode)
 (use-package rainbow-mode)
+(use-package reformatter)
 (use-package yaml-mode)
 
 ;; Calendar
@@ -231,6 +232,10 @@
 (add-to-list 'auto-mode-alist '("elvis\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("rebar\\.config" . erlang-mode))
 (add-to-list 'auto-mode-alist '("sys\\.config" . erlang-mode))
+
+(reformatter-define erlfmt
+  :program "erlfmt"
+  :args '("-"))
 
 ;; flymake and flycheck
 
