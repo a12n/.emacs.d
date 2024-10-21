@@ -104,6 +104,7 @@
                        (mu4e-trash-folder . ,(concat "/" name "/Trash"))
                        (smtpmail-smtp-server . ,host)
                        (smtpmail-smtp-user . ,(user-login-name))
+                       (smtpmail-servers-requiring-authorization . ,(regexp-quote host))
                        )))
             (let* ((name "yandex")
                    (domain (concat name ".ru"))
