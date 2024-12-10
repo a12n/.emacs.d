@@ -89,6 +89,7 @@
                        (mu4e-trash-folder . ,(concat "/" name "/Trash"))
                        (smtpmail-smtp-server . ,(concat "mail." host))
                        (smtpmail-smtp-user . ,user-mail-address)
+                       (smtpmail-servers-requiring-authorization . ,(regexp-quote host))
                        )))
             (let* ((name "intabs")
                    (host (concat name ".net")))
