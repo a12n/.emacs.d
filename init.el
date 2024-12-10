@@ -187,6 +187,13 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; Ada
+
+(reformatter-define gnatpp
+  :program "gnatpp"
+  :stdin nil :stdout nil
+  :args `(,input-file))
+
 ;; C, C++
 
 (use-package clang-format)
