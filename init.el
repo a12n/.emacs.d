@@ -326,7 +326,7 @@
 
 (use-package gruvbox-theme
   :config
-  (load-theme 'gruvbox-dark-medium)
+  (load-theme 'gruvbox-dark-soft)
   :custom-face
   (diff-refine-added ((t (:background "#79740e" :foreground "#b8bb26"))))
   (diff-refine-removed ((t (:background "#9d0006" :foreground "#fb4933"))))
