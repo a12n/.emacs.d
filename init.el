@@ -34,7 +34,6 @@
   (setq company-minimum-prefix-length 1)
   (global-company-mode)
   )
-(use-package indent-tools)
 (use-package lsp-mode)
 (use-package magit)
 (use-package markdown-mode)
