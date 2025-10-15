@@ -247,9 +247,9 @@
 ;; OCaml
 
 (use-package dune)
+(use-package merlin-company)
 (use-package merlin)
 (use-package ocamlformat)
-(use-package ocp-indent)
 (use-package tuareg)
 (use-package utop)
 
