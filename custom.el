@@ -10,7 +10,7 @@
  '(evil-intercept-maps '((edebug-mode-map) (ggtags-mode-map)))
  '(indent-tabs-mode nil)
  '(package-selected-packages
-   '(magit utop company ocp-indent merlin dune tuareg yaml-mode markdown-mode indent-tools aggressive-indent avy yasnippet smex use-package gruvbox-theme evil))
+   '(ligature rainbow-mode magit lsp-mode cmake-mode cider yasnippet yaml-mode utop use-package smex reformatter ocamlformat merlin-company merlin gruvbox-theme go-mode ggtags flycheck evil elixir-mode dune company clang-format aggressive-indent))
  '(require-final-newline t)
  '(tab-width 4))
 (custom-set-faces
